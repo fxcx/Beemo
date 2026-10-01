@@ -1,0 +1,267 @@
+{
+  "serviceCategories": [
+    {
+      "id": "software",
+      "title": "Soluciones de software",
+      "description": "Tecnología adaptada a los procesos y necesidades de tu empresa.",
+      "services": [
+        {
+          "id": "consultoria",
+          "tag": "Estrategia IT",
+          "title": "Asesoramiento y Consultoría",
+          "short": "Socio estratégico en consultoría e implementación de soluciones informáticas.",
+          "description": "Acompañamiento técnico y de negocio para ordenar prioridades, detectar oportunidades de mejora y definir una hoja de ruta tecnológica realista.",
+          "bullets": ["Diagnóstico tecnológico", "Definición de roadmap", "Acompañamiento de implementación"],
+          "icon": "strategy"
+        },
+        {
+          "id": "analisis",
+          "tag": "Relevamiento",
+          "title": "Análisis y Relevamiento",
+          "short": "Entendemos tu negocio antes de construir: procesos, necesidades y datos.",
+          "description": "Traducimos procesos, usuarios, reglas y datos en requisitos claros para que el desarrollo responda a cómo trabaja realmente la empresa.",
+          "bullets": ["Entrevistas con stakeholders", "Mapeo de procesos", "Definición de requerimientos"],
+          "icon": "research"
+        },
+        {
+          "id": "mobile",
+          "tag": "Mobile",
+          "title": "Aplicaciones Móviles",
+          "short": "Creamos y publicamos tu app para Android e iOS, de principio a fin.",
+          "description": "Aplicaciones móviles conectadas con tus sistemas para equipos internos, clientes o usuarios en campo, con foco en experiencia y operación.",
+          "bullets": ["Android + iOS", "Integración con APIs", "Publicación en stores"],
+          "icon": "mobile"
+        },
+        {
+          "id": "software",
+          "slug": "software-a-medida",
+          "quoteProjectType": "Software a medida",
+          "tag": "Desarrollo",
+          "title": "Software a Medida",
+          "short": "El software se adapta a tus procesos, no al revés. Hecho para tu empresa.",
+          "description": "Sistemas de gestión y plataformas internas diseñados alrededor de tu operación, roles, reglas, datos e integraciones.",
+          "bullets": ["Back-office y gestión", "Workflows específicos", "APIs e integraciones"],
+          "icon": "code",
+          "seoTitle": "Software a medida para empresas | BEEMO",
+          "seoDescription": "Desarrollamos sistemas y software a medida para adaptar la tecnología a los procesos, reglas e integraciones de tu empresa."
+        },
+        {
+          "id": "mantenimiento",
+          "tag": "Soporte",
+          "title": "Mantenimiento de Software",
+          "short": "Mantenemos tus sistemas vigentes frente a cambios tecnológicos, legales y operativos.",
+          "description": "Evolución y mantenimiento para evitar que un sistema a medida quede desactualizado frente a cambios tecnológicos, regulatorios o del negocio.",
+          "bullets": ["Actualizaciones tecnológicas", "Cambios de negocio", "Mantenimiento evolutivo"],
+          "icon": "support"
+        },
+        {
+          "id": "web",
+          "slug": "desarrollo-web",
+          "quoteProjectType": "Sitio web",
+          "tag": "Web",
+          "title": "Desarrollo Web",
+          "short": "Sitios institucionales autoadministrables, responsivos y optimizados para SEO.",
+          "description": "Experiencias web modernas y responsivas, pensadas para comunicar mejor, captar oportunidades y facilitar la administración de contenidos.",
+          "bullets": ["Responsive", "SEO técnico", "Panel autoadministrable"],
+          "icon": "web",
+          "seoTitle": "Desarrollo web para empresas | BEEMO",
+          "seoDescription": "Diseñamos y desarrollamos sitios web profesionales, responsivos, optimizados para SEO y preparados para crecer con tu empresa."
+        },
+        {
+          "id": "ia",
+          "slug": "ia-agentes",
+          "quoteProjectType": "Agentes de IA",
+          "tag": "Nuevo · Inteligencia Artificial",
+          "title": "Agentes de IA a medida",
+          "short": "Desde un asistente conversacional que atiende a tus clientes 24/7 hasta un promotor virtual que prospecta, califica y pre-aprueba de forma autónoma, integrado a tus sistemas de gestión.",
+          "description": "Desde un asistente conversacional que atiende a tus clientes 24/7 hasta un promotor virtual que prospecta, califica y pre-aprueba de forma autónoma, integrado a tus sistemas de gestión.",
+          "bullets": ["Atención conversacional 24/7", "Análisis de riesgo en segundos", "Integrado a tu back-office", "Deriva los casos complejos al equipo"],
+          "icon": "ai",
+          "featured": true,
+          "partnerNote": "Servicio desarrollado en alianza con Chamba AI",
+          "seoTitle": "Agentes de IA para empresas | BEEMO",
+          "seoDescription": "Diseñamos agentes de inteligencia artificial conectados con los procesos y sistemas de gestión de tu empresa."
+        }
+      ]
+    },
+    {
+      "id": "digital-growth",
+      "title": "Presencia y crecimiento digital",
+      "description": "Hacemos que tu negocio tenga presencia online, sea encontrado y genere nuevas oportunidades.",
+      "intro": "Tu negocio también necesita una estrategia digital. Creamos la presencia online, el contenido y las campañas necesarias para que tus clientes puedan encontrarte, conocerte y contactarte.",
+      "services": [
+        {
+          "id": "landing-google",
+          "slug": "landing-page-google",
+          "tag": "Presencia digital",
+          "title": "Landing Page + Google",
+          "short": "Tu negocio online, listo para ser encontrado.",
+          "description": "Creamos una landing page profesional y optimizada para celulares, junto con la configuración de tu Perfil de Negocio de Google para mejorar tu presencia en Google Search y Google Maps.",
+          "bullets": ["Landing page responsive", "Botón de WhatsApp", "Formulario de contacto", "SEO básico", "Perfil de Negocio de Google", "Ubicación en Google Maps"],
+          "detailIntro": "Una presencia digital profesional para que tus clientes puedan encontrarte y contactarte.",
+          "detailBullets": ["Landing page profesional", "Diseño responsive", "Información de servicios/productos", "Botón de WhatsApp", "Formulario de contacto", "Integración con redes sociales", "SEO básico", "Publicación del sitio", "Configuración del Perfil de Negocio de Google", "Datos comerciales", "Horarios", "Categorías", "Servicios", "Ubicación", "Enlaces de contacto"],
+          "icon": "globe2",
+          "seoTitle": "Landing Page y Perfil de Negocio de Google | La Plata Systems",
+          "seoDescription": "Creamos landing pages profesionales y configuramos tu Perfil de Negocio de Google para mejorar tu presencia en búsquedas y Google Maps."
+        },
+        {
+          "id": "contenido-meta-ads",
+          "slug": "contenido-meta-ads",
+          "tag": "Captación digital",
+          "title": "Contenido + Meta Ads",
+          "short": "Contenido que comunica. Publicidad que llega.",
+          "description": "Creamos contenido para tu marca y gestionamos campañas publicitarias en Meta Ads para llegar a nuevos clientes y generar consultas.",
+          "bullets": ["Estrategia de contenidos", "Creación de piezas", "Copys", "Campañas Meta Ads", "Segmentación de audiencias", "Optimización de campañas"],
+          "detailIntro": "Creamos contenido para tu marca y campañas para convertir visibilidad en oportunidades comerciales.",
+          "detailBullets": ["Estrategia básica de contenidos", "Calendario de publicaciones", "Diseño de piezas", "Adaptación de contenidos para redes", "Redacción de copys", "Llamados a la acción", "Creatividades para campañas", "Configuración de Meta Ads", "Segmentación", "Gestión y optimización", "Seguimiento de resultados", "Informe de campañas"],
+          "note": "La inversión publicitaria destinada a Meta Ads no está incluida en el servicio de gestión.",
+          "icon": "megaphone",
+          "seoTitle": "Contenido y gestión de campañas Meta Ads | La Plata Systems",
+          "seoDescription": "Creamos contenido para redes y gestionamos campañas Meta Ads en Facebook e Instagram para generar consultas y nuevas oportunidades comerciales."
+        },
+        {
+          "id": "presencia-digital-captacion",
+          "slug": "presencia-digital-captacion",
+          "tag": "Estrategia digital",
+          "title": "Presencia Digital + Captación",
+          "short": "Todo lo que necesitás para comenzar a generar presencia y oportunidades online.",
+          "description": "Landing page, presencia en Google, contenido para redes y campañas publicitarias integradas en una única estrategia digital.",
+          "bullets": ["Landing page", "Perfil de Negocio de Google", "Contenido para redes", "Campañas publicitarias"],
+          "icon": "rocket",
+          "visible": false
+        }
+      ]
+    }
+  ],
+  "clients": ["Huenú", "AMAT", "AMEBO", "AMECE", "AMEPA", "AMYS", "Lealtad", "Don Laureano", "Dos de Agosto"],
+  "aboutTabs": [
+    {
+      "id": "nosotros",
+      "label": "Nosotros",
+      "title": "Más de 30 años generando soluciones",
+      "body": "Somos una empresa argentina dedicada al desarrollo de soluciones de software con tecnologías de punta, ofreciendo herramientas innovadoras para distintos tipos de pymes y empresas."
+    },
+    {
+      "id": "mision",
+      "label": "Misión & Visión",
+      "title": "Acompañar la evolución del negocio",
+      "body": "Diseñamos soluciones que acompañan los cambios del mundo de las empresas y buscamos posicionarnos como referente regional por calidad, confiabilidad y flexibilidad."
+    },
+    {
+      "id": "metodologia",
+      "label": "Metodología",
+      "title": "Proceso con entregables definidos",
+      "body": "Trabajamos con análisis, diseño, desarrollo e implementación en etapas claras, con foco en usabilidad, eficiencia operacional, seguridad y tecnologías modernas."
+    },
+    {
+      "id": "valores",
+      "label": "Valores",
+      "title": "Lo que define nuestra forma de trabajar",
+      "body": "Confianza, cercanía, flexibilidad, pragmatismo, innovación, calidad y conocimiento compartido orientan nuestras relaciones de trabajo."
+    }
+  ],
+  "processSteps": [
+    {
+      "number": "01",
+      "title": "Análisis y Relevamiento",
+      "description": "Entrevistamos a usuarios, IT y gestión. Recopilamos datos cuantitativos y cualitativos para entender qué necesitás de verdad."
+    },
+    {
+      "number": "02",
+      "title": "Propuestas e Ideas",
+      "description": "Definimos requisitos y diseñamos la solución: usabilidad, eficiencia operacional, seguridad y tecnologías modernas."
+    },
+    {
+      "number": "03",
+      "title": "Implementación",
+      "description": "Desarrollo, pruebas, puesta en marcha y mantenimiento. Cada fase con entregables y acompañamiento."
+    }
+  ],
+  "quoteProjectTypes": [
+    { "label": "Software a medida", "sub": "Sistema de gestión, back-office o portal" },
+    { "label": "Aplicación móvil", "sub": "Android, iOS o app para equipos" },
+    { "label": "Sitio web", "sub": "Institucional, corporativo o autoadministrable" },
+    { "label": "Agentes de IA", "sub": "Asistente, automatización o integración" },
+    { "label": "Landing Page + Google", "sub": "Presencia profesional para tu negocio y Perfil de Negocio de Google." },
+    { "label": "Contenido + Meta Ads", "sub": "Creación de contenido y campañas para generar nuevas oportunidades." },
+    { "label": "Presencia Digital + Captación", "sub": "Landing, Google, contenido y publicidad en un mismo paquete." },
+    { "label": "Otro proyecto", "sub": "Consultoría o solución específica" }
+  ],
+  "quoteDeadlines": ["Lo antes posible", "1–3 meses", "3–6 meses", "+6 meses", "Todavía no lo sé"],
+  "hero": {
+    "experienceLabel": "Más de tres décadas de experiencia",
+    "titlePrefix": "Desarrollo de sistemas web",
+    "titleHighlight": "a medida",
+    "titleSuffix": "para tu empresa",
+    "description": "Análisis, software, apps y mantenimiento. Tecnología de punta, criterio y acompañamiento para convertir procesos reales en soluciones que funcionan.",
+    "quoteCta": "Pedí tu presupuesto",
+    "servicesCta": "Ver servicios",
+    "aiLabel": "Agentes de IA",
+    "newServiceLabel": "nuevo servicio",
+    "terminalLines": [
+      "lps://solución-a-medida",
+      "analizar(tus_procesos)",
+      "diseñar(la_solución)",
+      "desarrollar + publicar",
+      "integrar(IA)",
+      "mantener(vigente)"
+    ],
+    "readyLabel": "listo para tu empresa",
+    "metrics": [
+      { "value": "+30", "label": "años en el mercado" },
+      { "value": "1992", "label": "año de fundación" },
+      { "value": "+20", "label": "años de experiencia del equipo" }
+    ]
+  },
+  "company": {
+    "eyebrow": "/ Quiénes somos",
+    "title": "Más de 30 años generando soluciones",
+    "quote": "Compartimos el conocimiento del negocio con nuestros clientes, para lograr un aprendizaje en conjunto y flexibilizar nuestras soluciones a sus requerimientos.",
+    "values": ["Confianza", "Cercanía", "Flexibilidad", "Pragmatismo", "Innovación", "Calidad", "Conocimiento compartido"],
+    "teamEyebrow": "Nuestro equipo",
+    "teamTitle": "Más de 20 años de experiencia conjunta",
+    "teamImageUrl": "https://web.laplatasystems.com.ar/assets/equipo-lps.jpg",
+    "teamImageAlt": "Equipo de La Plata Systems colaborando en la oficina"
+  },
+  "contact": {
+    "email": "somos@laplatasystems.com.ar",
+    "location": "La Plata, Provincia de Buenos Aires, Argentina.",
+    "description": "Dejanos tu consulta por el formulario o escribinos por email. Te respondemos a la brevedad.",
+    "allyLabel": "Aliado estratégico",
+    "allyName": "Chamba AI",
+    "navigationLabel": "Navegación",
+    "contactLabel": "Contacto",
+    "footerDescription": "Desarrollo de soluciones de software a medida para pymes y empresas.",
+    "copyright": "© 2026 La Plata Systems. Todos los derechos reservados.",
+    "legalLinks": [
+      { "label": "Términos y Condiciones", "href": "/terminos" },
+      { "label": "Política de Privacidad", "href": "/privacidad" }
+    ],
+    "navigation": [
+      { "label": "Servicios", "href": "#servicios" },
+      { "label": "Nosotros", "href": "#nosotros" },
+      { "label": "Proceso", "href": "#proceso" },
+      { "label": "Recursos", "href": "/blog" },
+      { "label": "Pedir presupuesto", "href": "#presupuesto" }
+    ],
+    "mainNavigation": [
+      { "label": "Servicios", "href": "#servicios" },
+      { "label": "Nosotros", "href": "#nosotros" },
+      { "label": "Proceso", "href": "#proceso" },
+      { "label": "Recursos", "href": "/blog" },
+      { "label": "Pedir presupuesto", "href": "#presupuesto" }
+    ]
+  },
+  "chat": {
+    "greeting": "¡Hola! Soy Susy, la asistente de La Plata Systems. ¿En qué puedo ayudarte?",
+    "response": "Gracias. Para una respuesta personalizada, contanos tu proyecto en el formulario de presupuesto.",
+    "privacyNotice": "Este asistente es una demostración. Los mensajes no se envían ni se guardan.",
+    "inputPlaceholder": "Escribí tu consulta...",
+    "budgetCta": "Ir al formulario de presupuesto",
+    "whatsappLabel": "Hablar por WhatsApp"
+  },
+  "quote": {
+    "title": "Contanos tu proyecto en 3 pasos",
+    "description": "Completa el recorrido para ver un resumen de ejemplo. La información no se envía ni se guarda."
+  }
+}
