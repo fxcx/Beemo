@@ -55,7 +55,6 @@ export function ChatWidget() {
         <span className="font-display text-xl font-black">S</span>
         <span className="absolute -left-24 top-1/2 hidden -translate-y-1/2 rounded-full bg-ink px-3 py-2 text-xs font-semibold text-white shadow-xl sm:block">¿Tenés alguna duda?</span>
       </button>
-      <a href={process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "#contacto"} target="_blank" rel="noreferrer" className="fixed bottom-24 right-7 z-[65] hidden text-[11px] font-semibold text-ink underline decoration-brand decoration-2 underline-offset-4 sm:block">{chatContent.whatsappLabel}</a>
     </>
   );
 }

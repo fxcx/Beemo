@@ -63,3 +63,7 @@ export function Menu({ size = 22, ...props }: Props) {
 export function Send({ size = 18, ...props }: Props) {
   return <BaseIcon size={size} {...props}><path d="m3 11 18-8-8 18-2.8-7.2L3 11Z"/><path d="M10.2 13.8 14 10"/></BaseIcon>;
 }
+
+export function WhatsApp({ size = 22, ...props }: Props) {
+  return <BaseIcon size={size} {...props}><path d="M20.5 11.7a8.3 8.3 0 0 1-12.4 7.2L3 20l1.2-5.1a8.3 8.3 0 1 1 16.3-3.2Z"/><path d="M8.6 8.2c.2-.4.4-.5.7-.5h.5c.2 0 .3.1.4.4l.7 1.7c.1.2 0 .4-.1.5l-.5.6c-.1.1-.2.3-.1.5.4.8 1.3 1.7 2.2 2.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.6.8c.2.1.3.2.3.4 0 .3-.1.9-.6 1.3-.5.4-1.1.6-1.8.5-1-.1-2.1-.6-3.4-1.7-1.4-1.2-2.2-2.5-2.4-3.5-.2-.8 0-1.5.4-2.3Z"/></BaseIcon>;
+}
