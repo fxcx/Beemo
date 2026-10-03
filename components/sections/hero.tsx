@@ -28,9 +28,9 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="relative overflow-hidden rounded-[2rem] border border-ink/10 bg-ink p-5 shadow-2xl sm:p-6">
+          <div className="relative overflow-hidden rounded-2rem border border-ink/10 bg-ink p-5 shadow-2xl sm:p-6">
             <div className="absolute -right-16 -top-16 size-44 rounded-full bg-brand/35 blur-3xl" />
-            <div className="relative rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-5 sm:p-6">
+            <div className="relative rounded-1.5rem border border-white/10 bg-white/[0.035] p-5 sm:p-6">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand">{heroContent.aiLabel}</span>
                 <span className="rounded-full bg-brand/12 px-2.5 py-1 text-[10px] font-bold text-brand">{heroContent.newServiceLabel}</span>
@@ -47,7 +47,7 @@ export function Hero() {
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {heroContent.metrics.map(({ value, label }) => (
-                <div key={label} className="rounded-2xl border border-white/8 bg-white/[0.035] p-4">
+                <div key={value} className="rounded-2xl border border-white/8 bg-white/[0.035] p-4">
                   <p className="text-2xl font-semibold text-white">{value}</p>
                   <p className="mt-1 text-xs leading-5 text-white/45">{label}</p>
                 </div>
