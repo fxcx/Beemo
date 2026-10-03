@@ -1,17 +1,36 @@
 import type { Metadata, Viewport } from "next";
+import { configuracion } from "@/utils/configuracion";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "La Plata Systems — Desarrollo de sistemas web a medida",
-  description:
-    "Desarrollo de software, aplicaciones móviles, sitios web, mantenimiento y agentes de IA a medida para pymes y empresas.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(configuracion.siteUrl),
+  title: {
+    default: `${configuracion.nameCompany} | Software a medida para empresas`,
+    template: `%s | ${configuracion.nameCompany}`,
+  },
+  description: configuracion.seoDescription,
+  applicationName: configuracion.nameCompany,
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "/",
+    siteName: configuracion.nameCompany,
+    title: `${configuracion.nameCompany} | Software a medida para empresas`,
+    description: configuracion.seoDescription,
+  },
+  twitter: {
+    card: "summary",
+    title: `${configuracion.nameCompany} | Software a medida para empresas`,
+    description: configuracion.seoDescription,
+  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   colorScheme: "light",
+  themeColor: "#19d58d",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

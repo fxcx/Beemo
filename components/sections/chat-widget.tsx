@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Send } from "@/components/icons";
 import { chatContent } from "@/lib/content";
+import { configuracion } from "@/utils/configuracion";
 
 type Message = { from: "bot" | "user"; text: string };
 
@@ -28,7 +29,7 @@ export function ChatWidget() {
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="grid size-10 place-items-center rounded-full bg-brand font-bold text-ink">S</div>
-                <div><p className="text-sm font-semibold">Susy</p><p className="text-xs text-white/45">Asistente de La Plata Systems</p></div>
+                <div><p className="text-sm font-semibold">Susy</p><p className="text-xs text-white/45">Asistente de {configuracion.nameCompany}</p></div>
               </div>
               <button type="button" onClick={() => setOpen(false)} className="text-sm text-white/55 hover:text-white" aria-label="Cerrar asistente">×</button>
             </div>

@@ -5,6 +5,7 @@ import { BlogPostCard } from "@/components/blog/blog-post-card";
 import { Footer } from "@/components/sections/footer";
 import { Header } from "@/components/sections/header";
 import { blogAuthors, blogPosts, getBlogAuthor } from "@/lib/blog";
+import { configuracion } from "@/utils/configuracion";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -21,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${author.name}: autor de recursos sobre soluciones digitales`,
     description: author.description,
     alternates: { canonical: author.href },
-    openGraph: { title: author.name, description: author.description, type: "profile", url: author.href },
-    twitter: { card: "summary", title: author.name, description: author.description },
+    openGraph: { title: `${author.name} | ${configuracion.nameCompany}`, description: author.description, type: "profile", url: author.href, siteName: configuracion.nameCompany },
+    twitter: { card: "summary", title: `${author.name} | ${configuracion.nameCompany}`, description: author.description },
     robots: { index: true, follow: true },
   };
 }
@@ -32,14 +33,14 @@ export default async function BlogAuthorPage({ params }: Props) {
   const author = getBlogAuthor(slug);
   if (!author) notFound();
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const siteUrl = configuracion.siteUrl;
   const authorJsonLd = {
     "@context": "https://schema.org",
     "@type": author.type,
     name: author.name,
     description: author.description,
     url: `${siteUrl}${author.href}`,
-    ...(author.type === "Person" ? { worksFor: { "@type": "Organization", name: "BEEMO", url: siteUrl } } : {}),
+    ...(author.type === "Person" ? { worksFor: { "@type": "Organization", name: configuracion.nameCompany, url: siteUrl } } : {}),
   };
   const authoredPosts = blogPosts.filter((post) => post.authorSlug === author.slug);
 
@@ -52,7 +53,7 @@ export default async function BlogAuthorPage({ params }: Props) {
           <div className="mx-auto max-w-7xl">
             <nav aria-label="Migas de pan" className="flex items-center gap-2 text-sm font-semibold text-muted"><Link href="/" className="hover:text-ink">Inicio</Link><span aria-hidden="true">/</span><Link href="/blog" className="hover:text-ink">Recursos</Link><span aria-hidden="true">/</span><span className="text-ink">Autor</span></nav>
             <p className="eyebrow mt-10">/ Autoría</p>
-            <h1 className="mt-4 font-display text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">{author.name}</h1>
+            <h1 className="mt-4 font-display text-4xl font-semibold tracking-tighter sm:text-5xl">{author.name}</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">{author.description}</p>
             <Link href="/blog" className="mt-6 inline-flex text-sm font-semibold text-ink hover:text-brand-deep">Volver a Recursos ↗</Link>
           </div>

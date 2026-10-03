@@ -42,7 +42,7 @@
           "description": "Sistemas de gestión y plataformas internas diseñados alrededor de tu operación, roles, reglas, datos e integraciones.",
           "bullets": ["Back-office y gestión", "Workflows específicos", "APIs e integraciones"],
           "icon": "code",
-          "seoTitle": "Software a medida para empresas | BEEMO",
+          "seoTitle": "Software a medida para empresas",
           "seoDescription": "Desarrollamos sistemas y software a medida para adaptar la tecnología a los procesos, reglas e integraciones de tu empresa."
         },
         {
@@ -64,7 +64,7 @@
           "description": "Experiencias web modernas y responsivas, pensadas para comunicar mejor, captar oportunidades y facilitar la administración de contenidos.",
           "bullets": ["Responsive", "SEO técnico", "Panel autoadministrable"],
           "icon": "web",
-          "seoTitle": "Desarrollo web para empresas | BEEMO",
+          "seoTitle": "Desarrollo web para empresas",
           "seoDescription": "Diseñamos y desarrollamos sitios web profesionales, responsivos, optimizados para SEO y preparados para crecer con tu empresa."
         },
         {
@@ -79,7 +79,7 @@
           "icon": "ai",
           "featured": true,
           "partnerNote": "Servicio desarrollado en alianza con Chamba AI",
-          "seoTitle": "Agentes de IA para empresas | BEEMO",
+          "seoTitle": "Agentes de IA para empresas",
           "seoDescription": "Diseñamos agentes de inteligencia artificial conectados con los procesos y sistemas de gestión de tu empresa."
         }
       ]
@@ -101,7 +101,7 @@
           "detailIntro": "Una presencia digital profesional para que tus clientes puedan encontrarte y contactarte.",
           "detailBullets": ["Landing page profesional", "Diseño responsive", "Información de servicios/productos", "Botón de WhatsApp", "Formulario de contacto", "Integración con redes sociales", "SEO básico", "Publicación del sitio", "Configuración del Perfil de Negocio de Google", "Datos comerciales", "Horarios", "Categorías", "Servicios", "Ubicación", "Enlaces de contacto"],
           "icon": "globe2",
-          "seoTitle": "Landing Page y Perfil de Negocio de Google | La Plata Systems",
+          "seoTitle": "Landing Page y Perfil de Negocio de Google",
           "seoDescription": "Creamos landing pages profesionales y configuramos tu Perfil de Negocio de Google para mejorar tu presencia en búsquedas y Google Maps."
         },
         {
@@ -116,7 +116,7 @@
           "detailBullets": ["Estrategia básica de contenidos", "Calendario de publicaciones", "Diseño de piezas", "Adaptación de contenidos para redes", "Redacción de copys", "Llamados a la acción", "Creatividades para campañas", "Configuración de Meta Ads", "Segmentación", "Gestión y optimización", "Seguimiento de resultados", "Informe de campañas"],
           "note": "La inversión publicitaria destinada a Meta Ads no está incluida en el servicio de gestión.",
           "icon": "megaphone",
-          "seoTitle": "Contenido y gestión de campañas Meta Ads | La Plata Systems",
+          "seoTitle": "Contenido y gestión de campañas Meta Ads",
           "seoDescription": "Creamos contenido para redes y gestionamos campañas Meta Ads en Facebook e Instagram para generar consultas y nuevas oportunidades comerciales."
         },
         {
@@ -189,7 +189,7 @@
   ],
   "quoteDeadlines": ["Lo antes posible", "1–3 meses", "3–6 meses", "+6 meses", "Todavía no lo sé"],
   "hero": {
-    "experienceLabel": "Más de tres décadas de experiencia",
+    "experienceLabel": "Más de tres décadas de experiencia del equipo",
     "titlePrefix": "Desarrollo de sistemas web",
     "titleHighlight": "a medida",
     "titleSuffix": "para tu empresa",
@@ -199,7 +199,7 @@
     "aiLabel": "Agentes de IA",
     "newServiceLabel": "nuevo servicio",
     "terminalLines": [
-      "lps://solución-a-medida",
+      "beemo://solución-a-medida",
       "analizar(tus_procesos)",
       "diseñar(la_solución)",
       "desarrollar + publicar",
@@ -208,20 +208,20 @@
     ],
     "readyLabel": "listo para tu empresa",
     "metrics": [
-      { "value": "+30", "label": "años en el mercado" },
-      { "value": "1992", "label": "año de fundación" },
+      { "value": "+30", "label": "años de experiencia del equipo" },
+      { "value": "1992", "label": "inicio de trayectoria del equipo" },
       { "value": "+20", "label": "años de experiencia del equipo" }
     ]
   },
   "company": {
     "eyebrow": "/ Quiénes somos",
-    "title": "Más de 30 años generando soluciones",
+    "title": "Más de 30 años de experiencia del equipo",
     "quote": "Compartimos el conocimiento del negocio con nuestros clientes, para lograr un aprendizaje en conjunto y flexibilizar nuestras soluciones a sus requerimientos.",
     "values": ["Confianza", "Cercanía", "Flexibilidad", "Pragmatismo", "Innovación", "Calidad", "Conocimiento compartido"],
     "teamEyebrow": "Nuestro equipo",
     "teamTitle": "Más de 20 años de experiencia conjunta",
     "teamImageUrl": "https://web.laplatasystems.com.ar/assets/equipo-lps.jpg",
-    "teamImageAlt": "Equipo de La Plata Systems colaborando en la oficina"
+    "teamImageAlt": "Equipo de Beemo colaborando en la oficina"
   },
   "contact": {
     "description": "Dejanos tu consulta por el formulario o escribinos por email. Te respondemos a la brevedad.",
@@ -248,12 +248,11 @@
     ]
   },
   "chat": {
-    "greeting": "¡Hola! Soy Susy, la asistente de La Plata Systems. ¿En qué puedo ayudarte?",
+    "greeting": "¡Hola! Soy Susy, la asistente de Beemo. ¿En qué puedo ayudarte?",
     "response": "Gracias. Para una respuesta personalizada, contanos tu proyecto en el formulario de presupuesto.",
     "privacyNotice": "Este asistente es una demostración. Los mensajes no se envían ni se guardan.",
     "inputPlaceholder": "Escribí tu consulta...",
-    "budgetCta": "Ir al formulario de presupuesto",
-    "whatsappLabel": "Hablar por WhatsApp"
+    "budgetCta": "Ir al formulario de presupuesto"
   },
   "quote": {
     "title": "Contanos tu proyecto en 3 pasos",

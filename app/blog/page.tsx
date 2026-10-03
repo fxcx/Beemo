@@ -5,20 +5,22 @@ import { Footer } from "@/components/sections/footer";
 import { Header } from "@/components/sections/header";
 import { blogCategories } from "@/data/blog-posts";
 import { blogPosts } from "@/lib/blog";
+import { configuracion } from "@/utils/configuracion";
 
 export const metadata: Metadata = {
-  title: "Recursos sobre software, IA y soluciones digitales | BEEMO",
+  title: "Recursos sobre software, IA y soluciones digitales",
   description: "Ideas prácticas para decidir sobre software a medida, desarrollo web, agentes de IA, automatización, integraciones, presencia y marketing digital.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Recursos sobre software y soluciones digitales | BEEMO",
+    title: `Recursos sobre software y soluciones digitales | ${configuracion.nameCompany}`,
     description: "Guías para tomar mejores decisiones sobre tecnología, procesos y crecimiento digital.",
     type: "website",
     url: "/blog",
+    siteName: configuracion.nameCompany,
   },
   twitter: {
     card: "summary",
-    title: "Recursos sobre software y soluciones digitales | BEEMO",
+    title: `Recursos sobre software y soluciones digitales | ${configuracion.nameCompany}`,
     description: "Guías para tomar mejores decisiones sobre tecnología, procesos y crecimiento digital.",
   },
   robots: { index: true, follow: true },
@@ -33,7 +35,7 @@ export default function BlogIndexPage() {
       <main>
         <section className="px-5 pb-14 pt-16 sm:px-8 sm:pb-20 sm:pt-24 lg:px-10">
           <div className="mx-auto max-w-7xl">
-            <p className="eyebrow">/ Recursos BEEMO</p>
+            <p className="eyebrow">/ Recursos {configuracion.nameCompany}</p>
             <h1 className="mt-4 max-w-4xl font-display text-[clamp(2.6rem,6vw,5rem)] font-semibold leading-[0.98] tracking-[-0.055em]">Ideas útiles para <span className="text-muted">decidir mejor</span></h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">Guías prácticas sobre tecnología, procesos y crecimiento digital. Sin recetas mágicas: contexto para elegir la solución adecuada para tu empresa.</p>
             <nav aria-label="Categorías del blog" className="mt-9 flex flex-wrap gap-x-6 gap-y-3 border-y border-line py-4 text-sm font-semibold">

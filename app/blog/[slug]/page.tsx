@@ -7,12 +7,12 @@ import { BlogRichContent } from "@/components/blog/blog-rich-content";
 import { Footer } from "@/components/sections/footer";
 import { Header } from "@/components/sections/header";
 import { blogAuthor, blogPosts, getBlogAuthor, getBlogCategory, getBlogPost, getRelatedPosts } from "@/lib/blog";
+import { configuracion } from "@/utils/configuracion";
 
 type Props = { params: Promise<{ slug: string }> };
 
 function articleUrl(slug: string) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  return new URL(`/blog/${slug}`, siteUrl).toString();
+  return new URL(`/blog/${slug}`, configuracion.siteUrl).toString();
 }
 
 export function generateStaticParams() {
@@ -25,15 +25,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   const canonical = `/blog/${post.slug}`;
+  const brandedTitle = `${post.seoTitle} | ${configuracion.nameCompany}`;
   return {
     title: post.seoTitle,
     description: post.seoDescription,
     alternates: { canonical },
     openGraph: {
-      title: post.seoTitle,
+      title: brandedTitle,
       description: post.seoDescription,
       type: "article",
       url: canonical,
+      siteName: configuracion.nameCompany,
       publishedTime: `${post.publishedAt}T00:00:00-03:00`,
       modifiedTime: `${post.updatedAt ?? post.publishedAt}T00:00:00-03:00`,
       authors: [blogAuthor.name],
@@ -41,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: post.featuredImage ? "summary_large_image" : "summary",
-      title: post.seoTitle,
+      title: brandedTitle,
       description: post.seoDescription,
       ...(post.featuredImage ? { images: [post.featuredImage] } : {}),
     },
@@ -59,9 +61,9 @@ export default async function BlogArticlePage({ params }: Props) {
   const relatedPosts = getRelatedPosts(post).slice(0, 3);
   const canonicalUrl = articleUrl(post.slug);
   const breadcrumbItems = [
-    { name: "Inicio", url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/` },
-    { name: "Recursos", url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/blog` },
-    { name: category?.title ?? "Blog", url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/blog#categoria-${post.category}` },
+    { name: "Inicio", url: `${configuracion.siteUrl}/` },
+    { name: "Recursos", url: `${configuracion.siteUrl}/blog` },
+    { name: category?.title ?? "Blog", url: `${configuracion.siteUrl}/blog#categoria-${post.category}` },
     { name: post.title, url: canonicalUrl },
   ];
   const jsonLd = [
@@ -72,12 +74,12 @@ export default async function BlogArticlePage({ params }: Props) {
       description: post.seoDescription,
       datePublished: `${post.publishedAt}T00:00:00-03:00`,
       dateModified: `${post.updatedAt ?? post.publishedAt}T00:00:00-03:00`,
-      author: { "@type": author.type, name: author.name, url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}${author.href}` },
-      publisher: { "@type": "Organization", name: "BEEMO", url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000" },
+      author: { "@type": author.type, name: author.name, url: `${configuracion.siteUrl}${author.href}` },
+      publisher: { "@type": "Organization", name: configuracion.nameCompany, url: configuracion.siteUrl },
       mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
       articleSection: category?.title,
       keywords: post.keywords.join(", "),
-      ...(post.featuredImage ? { image: [new URL(post.featuredImage, process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").toString()] } : {}),
+      ...(post.featuredImage ? { image: [new URL(post.featuredImage, configuracion.siteUrl).toString()] } : {}),
     },
     {
       "@context": "https://schema.org",

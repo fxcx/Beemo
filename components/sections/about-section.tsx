@@ -23,7 +23,7 @@ export function AboutSection() {
         </div>
 
         <div>
-          <div className="rounded-[2rem] border border-line bg-surface p-7 sm:p-9">
+          <div className="rounded-4xl border border-line bg-surface p-7 sm:p-9">
             <p className="text-sm font-bold uppercase tracking-[0.15em] text-brand-deep">{content.label}</p>
             <h3 className="mt-4 font-display text-3xl font-semibold tracking-[-0.045em] sm:text-4xl">{content.title}</h3>
             <p className="mt-5 max-w-2xl text-[16px] leading-8 text-muted">{content.body}</p>
@@ -38,7 +38,7 @@ export function AboutSection() {
               </div>
             ) : null}
           </div>
-          <div className="mt-5 overflow-hidden rounded-[2rem] border border-line bg-ink">
+          <div className="mt-5 overflow-hidden rounded-4xl border border-line bg-ink">
             <div className="grid gap-0 sm:grid-cols-2">
               <div className="relative min-h-56 bg-[radial-gradient(circle_at_70%_30%,rgba(25,213,141,.35),transparent_38%),linear-gradient(145deg,#1d2935,#0f1720)] p-7 text-white sm:min-h-64">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/45">{companyContent.teamEyebrow}</p>
@@ -47,7 +47,7 @@ export function AboutSection() {
               </div>
               <div className="relative min-h-56 overflow-hidden sm:min-h-64">
                 <img src={companyContent.teamImageUrl} alt={companyContent.teamImageAlt} className="absolute inset-0 h-full w-full object-cover opacity-75" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-ink via-transparent to-transparent" />
               </div>
             </div>
           </div>

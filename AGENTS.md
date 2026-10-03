@@ -1,6 +1,6 @@
-# Project context — La Plata Systems
+# Project context — Beemo
 
-This repository recreates `https://web.laplatasystems.com.ar/` as a modern Next.js App Router site.
+This repository contains the Beemo website built with the Next.js App Router. The prior La Plata Systems site is historical reference material only.
 
 ## Non-negotiables
 
@@ -28,6 +28,7 @@ This repository recreates `https://web.laplatasystems.com.ar/` as a modern Next.
 
 `QuoteForm` is currently UI-only. When connecting a backend, keep the browser-side UX intact and add a Server Action or Route Handler rather than hard-coding a provider into the component.
 
+<!-- markdownlint-disable MD025 -->
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
@@ -37,3 +38,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+<!-- markdownlint-enable MD025 -->

@@ -18,7 +18,6 @@ export function MobileNav({ homePrefix = "" }: { homePrefix?: string }) {
     const trigger = triggerRef.current;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const focusable = dialog?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])");
     dialog?.querySelector<HTMLElement>("[data-dialog-initial-focus]")?.focus();
 
     const onKeyDown = (event: KeyboardEvent) => {
@@ -50,8 +49,8 @@ export function MobileNav({ homePrefix = "" }: { homePrefix?: string }) {
         <span>Menú</span>
       </button>
       {open ? (
-        <div className="fixed inset-0 z-[80] overflow-y-auto bg-surface">
-          <div id="mobile-navigation" ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="mobile-navigation-title" className="mx-auto flex min-h-[100dvh] w-full max-w-7xl flex-col px-5 pb-7 pt-5 sm:px-8 sm:pb-10 sm:pt-7 lg:px-10">
+        <div className="fixed inset-0 z-80 overflow-y-auto bg-surface">
+          <div id="mobile-navigation" ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="mobile-navigation-title" className="mx-auto flex min-h-100dvh w-full max-w-7xl flex-col px-5 pb-7 pt-5 sm:px-8 sm:pb-10 sm:pt-7 lg:px-10">
             <div className="flex items-center justify-between border-b border-line pb-5">
               <a href={`${homePrefix}#inicio`} onClick={() => setOpen(false)} aria-label={`${configuracion.nameCompany}, inicio`}>
                 <BrandLogo className="h-12 w-32" />
@@ -63,7 +62,7 @@ export function MobileNav({ homePrefix = "" }: { homePrefix?: string }) {
             </div>
 
             <div className="mt-10 flex flex-1 flex-col sm:mt-14">
-              <p className="eyebrow">BEEMO / EXPLORAR</p>
+              <p className="eyebrow">{configuracion.nameCompany} / EXPLORAR</p>
               <h2 id="mobile-navigation-title" className="mt-3 font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl">¿A dónde vamos?</h2>
               <nav className="mt-7" aria-label="Navegación móvil">
                 <ol>

@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Check, Icon } from "@/components/icons";
 import { Footer } from "@/components/sections/footer";
 import { Header } from "@/components/sections/header";
 import { getServiceBySlug, services } from "@/lib/content";
+import { configuracion } from "@/utils/configuracion";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -26,11 +27,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: service.seoTitle,
     description: service.seoDescription,
+    alternates: { canonical: `/servicios/${slug}` },
     openGraph: {
-      title: service.seoTitle,
+      title: `${service.seoTitle} | ${configuracion.nameCompany}`,
       description: service.seoDescription,
       type: "website",
       url: `/servicios/${slug}`,
+      siteName: configuracion.nameCompany,
+    },
+    twitter: {
+      card: "summary",
+      title: `${service.seoTitle} | ${configuracion.nameCompany}`,
+      description: service.seoDescription,
     },
   };
 }
