@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { configuracion } from "@/utils/configuracion";
 
 export function BrandLogo({ className = "", inverted = false }: { className?: string; inverted?: boolean }) {
   return (
@@ -8,7 +9,7 @@ export function BrandLogo({ className = "", inverted = false }: { className?: st
         src="/beemo_negro_solo_nombre_200x200.png"
         width={200}
         height={200}
-        alt="La Plata Systems"
+        alt={configuracion.nameCompany}
         unoptimized
         className={`${className} object-cover ${inverted ? "brightness-0 invert" : ""}`}
       />

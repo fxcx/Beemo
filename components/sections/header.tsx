@@ -2,14 +2,15 @@ import { MobileNav } from "@/components/sections/mobile-nav";
 import { BrandLogo } from "@/components/brand-logo";
 import Link from "next/link";
 import { mainNavigation } from "@/lib/content";
+import { configuracion } from "@/utils/configuracion";
 
 export function Header({ homePrefix = "" }: { homePrefix?: string }) {
   const homeHref = (href: string) => href.startsWith("#") ? `${homePrefix}${href}` : href;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/80 bg-surface/88 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-line bg-surface">
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-        <a href={homeHref("#inicio")} className="group inline-flex items-center gap-2" aria-label="La Plata Systems, inicio">
+        <a href={homeHref("#inicio")} className="group inline-flex items-center gap-2" aria-label={`${configuracion.nameCompany}, inicio`}>
           <BrandLogo className="h-12 w-32 transition group-hover:scale-105 sm:h-16 sm:w-40" />
         </a>
 

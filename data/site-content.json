@@ -224,13 +224,10 @@
     "teamImageAlt": "Equipo de La Plata Systems colaborando en la oficina"
   },
   "contact": {
-    "email": "somos@laplatasystems.com.ar",
-    "location": "La Plata, Provincia de Buenos Aires, Argentina.",
     "description": "Dejanos tu consulta por el formulario o escribinos por email. Te respondemos a la brevedad.",
     "navigationLabel": "Navegación",
     "contactLabel": "Contacto",
     "footerDescription": "Desarrollo de soluciones de software a medida para pymes y empresas.",
-    "copyright": "© 2026 La Plata Systems. Todos los derechos reservados.",
     "legalLinks": [
       { "label": "Términos y Condiciones", "href": "/terminos" },
       { "label": "Política de Privacidad", "href": "/privacidad" }
