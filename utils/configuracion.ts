@@ -1,4 +1,4 @@
-const whatsappPhoneNumber = "5491151446625";
+const whatsappPhoneNumber = "5491122975538";
 const legalCompanyName = "Beemo S.A.S.";
 
 export const configuracion = {

@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     description: configuracion.seoDescription,
   },
   robots: { index: true, follow: true },
+  verification: {
+    other: {
+      "facebook-domain-verification": "oy1bz6nj585fayzmrzyr2xo2lt0zxg",
+    },
+  },
 };
 
 export const viewport: Viewport = {
