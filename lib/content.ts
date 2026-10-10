@@ -17,6 +17,7 @@ export type ServiceCategoryId = "software" | "digital-growth";
 export type Service = {
   id: string;
   slug?: string;
+  demoVideoUrl?: string;
   quoteProjectType?: string;
   category: ServiceCategoryId;
   tag: string;

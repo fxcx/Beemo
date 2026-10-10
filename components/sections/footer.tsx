@@ -1,5 +1,5 @@
 import { contactContent } from "@/lib/content";
-import { BrandLogo } from "@/components/brand-logo";
+import { BrandLogo } from "@/components/genericos/brand-logo";
 import { configuracion } from "@/utils/configuracion";
 import Link from "next/link";
 

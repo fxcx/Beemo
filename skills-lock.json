@@ -1,11 +1,23 @@
 {
   "version": 1,
   "skills": {
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "de7de6829490819b3c18cfdad2c93d002bd428c4b738d29b971ef3dc8f911d08"
+    },
     "ui-ux-pro-max": {
       "source": "nexu-io/open-design",
       "sourceType": "github",
       "skillPath": "skills/ui-ux-pro-max/SKILL.md",
       "computedHash": "257883092dc8a10403cd967c959ceb417f1c4b8438215a8bab5002292d72936b"
+    },
+    "using-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-superpowers/SKILL.md",
+      "computedHash": "ef8670c2a2d8e2f6ed52d6f3219759903300ca13afc5ec2e25826a735112562b"
     }
   }
 }

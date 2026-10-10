@@ -1,5 +1,5 @@
 import { MobileNav } from "@/components/sections/mobile-nav";
-import { BrandLogo } from "@/components/brand-logo";
+import { BrandLogo } from "@/components/genericos/brand-logo";
 import Link from "next/link";
 import { mainNavigation } from "@/lib/content";
 import { configuracion } from "@/utils/configuracion";

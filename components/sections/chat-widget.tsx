@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send } from "@/components/icons";
+import { Send } from "@/components/genericos/icons";
 import { chatContent } from "@/lib/content";
 import { configuracion } from "@/utils/configuracion";
 
@@ -28,8 +28,8 @@ export function ChatWidget() {
           <div className="bg-ink px-5 py-4 text-white">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="grid size-10 place-items-center rounded-full bg-brand font-bold text-ink">S</div>
-                <div><p className="text-sm font-semibold">Susy</p><p className="text-xs text-white/45">Asistente de {configuracion.nameCompany}</p></div>
+                <div className="grid size-10 place-items-center rounded-full bg-brand font-bold text-ink">B</div>
+                <div><p className="text-sm font-semibold">Beemo</p><p className="text-xs text-white/45">Asistente de {configuracion.nameCompany}</p></div>
               </div>
               <button type="button" onClick={() => setOpen(false)} className="text-sm text-white/55 hover:text-white" aria-label="Cerrar asistente">×</button>
             </div>
@@ -52,8 +52,8 @@ export function ChatWidget() {
         </div>
       ) : null}
 
-      <button type="button" onClick={() => setOpen((current) => !current)} className="chat-bounce fixed bottom-5 right-5 z-[65] grid size-16 place-items-center rounded-full border-4 border-white bg-brand text-ink shadow-2xl transition hover:scale-105" aria-label="Abrir asistente Susy">
-        <span className="font-display text-xl font-black">S</span>
+      <button type="button" onClick={() => setOpen((current) => !current)} className="chat-bounce fixed bottom-5 right-5 z-[65] grid size-16 place-items-center rounded-full border-4 border-white bg-brand text-ink shadow-2xl transition hover:scale-105" aria-label="Abrir asistente Beemo">
+        <span className="font-display text-xl font-black">B</span>
         <span className="absolute -left-24 top-1/2 hidden -translate-y-1/2 rounded-full bg-ink px-3 py-2 text-xs font-semibold text-white shadow-xl sm:block">¿Tenés alguna duda?</span>
       </button>
     </>

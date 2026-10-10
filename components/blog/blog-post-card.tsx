@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "@/components/icons";
+import { ArrowUpRight } from "@/components/genericos/icons";
 import { BlogIllustration } from "@/components/blog/blog-illustration";
 import { getBlogCategory } from "@/lib/blog";
 import type { BlogPost } from "@/lib/blog-types";

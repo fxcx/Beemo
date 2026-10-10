@@ -7,34 +7,47 @@
       "services": [
         {
           "id": "consultoria",
+          "slug": "asesoramiento-consultoria",
+          "demoVideoUrl": "",
           "tag": "Estrategia IT",
           "title": "Asesoramiento y Consultoría",
           "short": "Socio estratégico en consultoría e implementación de soluciones informáticas.",
           "description": "Acompañamiento técnico y de negocio para ordenar prioridades, detectar oportunidades de mejora y definir una hoja de ruta tecnológica realista.",
           "bullets": ["Diagnóstico tecnológico", "Definición de roadmap", "Acompañamiento de implementación"],
-          "icon": "strategy"
+          "icon": "strategy",
+          "seoTitle": "Asesoramiento y Consultoría en Tecnología",
+          "seoDescription": "Acompañamiento técnico y estratégico para ordenar prioridades, definir un roadmap tecnológico y acompañar la implementación en tu empresa."
         },
         {
-          "id": "analisis",
-          "tag": "Relevamiento",
-          "title": "Análisis y Relevamiento",
-          "short": "Entendemos tu negocio antes de construir: procesos, necesidades y datos.",
-          "description": "Traducimos procesos, usuarios, reglas y datos en requisitos claros para que el desarrollo responda a cómo trabaja realmente la empresa.",
-          "bullets": ["Entrevistas con stakeholders", "Mapeo de procesos", "Definición de requerimientos"],
-          "icon": "research"
+          "id": "sistema-gestion",
+          "slug": "sistema-de-gestion",
+          "demoVideoUrl": "",
+          "tag": "Gestión",
+          "title": "Sistema de Gestión",
+          "short": "Administrá tu empresa desde un solo lugar: ventas, stock, facturación y más.",
+          "description": "Sistemas de gestión integral adaptados a los procesos de tu empresa: ventas, compras, stock, facturación, cobranzas y reportes, integrados en una única plataforma.",
+          "bullets": ["Ventas y facturación", "Control de stock", "Reportes e indicadores"],
+          "icon": "code",
+          "seoTitle": "Sistemas de Gestión para Empresas",
+          "seoDescription": "Administrá ventas, stock, facturación y cobranzas desde una única plataforma de gestión integral adaptada a los procesos de tu empresa."
         },
         {
-          "id": "mobile",
-          "tag": "Mobile",
-          "title": "Aplicaciones Móviles",
-          "short": "Creamos y publicamos tu app para Android e iOS, de principio a fin.",
-          "description": "Aplicaciones móviles conectadas con tus sistemas para equipos internos, clientes o usuarios en campo, con foco en experiencia y operación.",
-          "bullets": ["Android + iOS", "Integración con APIs", "Publicación en stores"],
-          "icon": "mobile"
+          "id": "contabilidad",
+          "slug": "sistemas-de-contabilidad",
+          "demoVideoUrl": "",
+          "tag": "Contabilidad",
+          "title": "Sistemas de Contabilidad",
+          "short": "Automatizá la contabilidad de tu empresa con sistemas claros y adaptados a la normativa.",
+          "description": "Sistemas contables a medida que simplifican el registro, seguimiento y reporte de la información financiera de tu empresa, adaptados a la normativa argentina.",
+          "bullets": ["Libro diario y mayor", "Balances y estados contables", "Integración con gestión"],
+          "icon": "research",
+          "seoTitle": "Sistemas de Contabilidad para Empresas",
+          "seoDescription": "Sistemas contables a medida que simplifican el registro y reporte financiero de tu empresa, adaptados a la normativa argentina."
         },
         {
           "id": "software",
           "slug": "software-a-medida",
+          "demoVideoUrl": "",
           "quoteProjectType": "Software a medida",
           "tag": "Desarrollo",
           "title": "Software a Medida",
@@ -47,29 +60,34 @@
         },
         {
           "id": "mantenimiento",
+          "slug": "mantenimiento-de-software",
+          "demoVideoUrl": "",
           "tag": "Soporte",
           "title": "Mantenimiento de Software",
           "short": "Mantenemos tus sistemas vigentes frente a cambios tecnológicos, legales y operativos.",
           "description": "Evolución y mantenimiento para evitar que un sistema a medida quede desactualizado frente a cambios tecnológicos, regulatorios o del negocio.",
           "bullets": ["Actualizaciones tecnológicas", "Cambios de negocio", "Mantenimiento evolutivo"],
-          "icon": "support"
+          "icon": "support",
+          "seoTitle": "Mantenimiento y Evolución de Software",
+          "seoDescription": "Mantenemos tus sistemas vigentes y en funcionamiento ante cambios tecnológicos, legales y operativos de tu empresa."
         },
         {
-          "id": "web",
-          "slug": "desarrollo-web",
-          "quoteProjectType": "Sitio web",
-          "tag": "Web",
-          "title": "Desarrollo Web",
-          "short": "Sitios institucionales autoadministrables, responsivos y optimizados para SEO.",
-          "description": "Experiencias web modernas y responsivas, pensadas para comunicar mejor, captar oportunidades y facilitar la administración de contenidos.",
-          "bullets": ["Responsive", "SEO técnico", "Panel autoadministrable"],
+          "id": "educativo",
+          "slug": "sistemas-educativos",
+          "demoVideoUrl": "",
+          "tag": "Educación",
+          "title": "Sistemas Educativos Institucionales",
+          "short": "Plataformas digitales para instituciones educativas: alumnos, docentes y gestión académica.",
+          "description": "Soluciones tecnológicas para instituciones educativas que centralizan la gestión académica, la comunicación con familias y el seguimiento de alumnos y docentes.",
+          "bullets": ["Gestión académica", "Comunicación institucional", "Seguimiento de alumnos"],
           "icon": "web",
-          "seoTitle": "Desarrollo web para empresas",
-          "seoDescription": "Diseñamos y desarrollamos sitios web profesionales, responsivos, optimizados para SEO y preparados para crecer con tu empresa."
+          "seoTitle": "Sistemas Educativos para Instituciones",
+          "seoDescription": "Plataformas digitales que centralizan la gestión académica, comunicación con familias y el seguimiento de alumnos y docentes de tu institución educativa."
         },
         {
           "id": "ia",
           "slug": "ia-agentes",
+          "demoVideoUrl": "",
           "quoteProjectType": "Agentes de IA",
           "tag": "Nuevo · Inteligencia Artificial",
           "title": "Agentes de IA a medida",
@@ -93,6 +111,7 @@
         {
           "id": "landing-google",
           "slug": "landing-page-google",
+          "demoVideoUrl": "",
           "tag": "Presencia digital",
           "title": "Landing Page + Google",
           "short": "Tu negocio online, listo para ser encontrado.",
@@ -107,6 +126,7 @@
         {
           "id": "contenido-meta-ads",
           "slug": "contenido-meta-ads",
+          "demoVideoUrl": "",
           "tag": "Captación digital",
           "title": "Contenido + Meta Ads",
           "short": "Contenido que comunica. Publicidad que llega.",
@@ -122,6 +142,7 @@
         {
           "id": "presencia-digital-captacion",
           "slug": "presencia-digital-captacion",
+          "demoVideoUrl": "",
           "tag": "Estrategia digital",
           "title": "Presencia Digital + Captación",
           "short": "Todo lo que necesitás para comenzar a generar presencia y oportunidades online.",
@@ -248,7 +269,7 @@
     ]
   },
   "chat": {
-    "greeting": "¡Hola! Soy Susy, la asistente de Beemo. ¿En qué puedo ayudarte?",
+    "greeting": "¡Hola! Soy Beemo, el asistente de Beemo. ¿En qué puedo ayudarte?",
     "response": "Gracias. Para una respuesta personalizada, contanos tu proyecto en el formulario de presupuesto.",
     "privacyNotice": "Este asistente es una demostración. Los mensajes no se envían ni se guardan.",
     "inputPlaceholder": "Escribí tu consulta...",

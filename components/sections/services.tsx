@@ -1,8 +1,8 @@
-import { ArrowUpRight, Check, Icon } from "@/components/icons";
+import { ArrowUpRight, Check, Icon } from "@/components/genericos/icons";
 import Link from "next/link";
 import { serviceCategories, type Service, type ServiceCategory } from "@/lib/content";
 
-export function Services({ onSelect }: { onSelect: (service: Service) => void }) {
+export function Services() {
   return (
     <section id="servicios" className="bg-surface px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
       <div className="mx-auto max-w-7xl">
@@ -30,7 +30,7 @@ export function Services({ onSelect }: { onSelect: (service: Service) => void })
               </div>
               <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {visibleServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} category={category} onSelect={onSelect} />
+                  <ServiceCard key={service.id} service={service} category={category} />
                 ))}
               </div>
             </section>
@@ -41,15 +41,16 @@ export function Services({ onSelect }: { onSelect: (service: Service) => void })
   );
 }
 
-function ServiceCard({ service, category, onSelect }: { service: Service; category: ServiceCategory; onSelect: (service: Service) => void }) {
+function ServiceCard({ service, category }: { service: Service; category: ServiceCategory }) {
   const className = `service-card group relative block h-full text-left ${service.featured ? "md:col-span-2 xl:col-span-3" : ""}`;
-  const content = <ServiceCardContent service={service} showFeatures={category.id === "digital-growth"} />;
+  const showFeatures = category.id === "digital-growth" || !!service.slug;
+  const content = <ServiceCardContent service={service} showFeatures={showFeatures} />;
 
-  if (category.id === "digital-growth" && service.slug) {
+  if (service.slug) {
     return <Link href={`/servicios/${service.slug}`} className={className}>{content}</Link>;
   }
 
-  return <button type="button" onClick={() => onSelect(service)} className={`${className} w-full`}>{content}</button>;
+  return <div className={className}>{content}</div>;
 }
 
 function ServiceCardContent({ service, showFeatures }: { service: Service; showFeatures: boolean }) {
@@ -59,9 +60,11 @@ function ServiceCardContent({ service, showFeatures }: { service: Service; showF
         <span className={`grid size-12 shrink-0 place-items-center rounded-2xl ${service.featured ? "bg-brand text-ink" : "bg-surface text-ink"}`}>
           <Icon name={service.icon} size={24} />
         </span>
-        <span className={`grid size-10 place-items-center rounded-full border transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 ${service.featured ? "border-white/15 text-white/75" : "border-line text-muted"}`}>
-          <ArrowUpRight size={18} />
-        </span>
+        {service.slug ? (
+          <span className={`grid size-10 place-items-center rounded-full border transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 ${service.featured ? "border-white/15 text-white/75" : "border-line text-muted"}`}>
+            <ArrowUpRight size={18} />
+          </span>
+        ) : null}
       </div>
       <p className={`mt-8 text-xs font-bold uppercase tracking-[0.14em] ${service.featured ? "text-brand" : "text-brand-deep"}`}>{service.tag}</p>
       <h4 className={`mt-3 font-display text-2xl font-semibold tracking-[-0.035em] ${service.featured ? "sm:text-3xl" : ""}`}>{service.title}</h4>
@@ -72,7 +75,7 @@ function ServiceCardContent({ service, showFeatures }: { service: Service; showF
         </div>
       ) : null}
       {service.partnerNote ? <p className="mt-5 text-xs font-semibold text-white/55">{service.partnerNote}</p> : null}
-      {showFeatures ? <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink">Ver servicio <ArrowUpRight size={16} /></span> : null}
+      {service.slug ? <span className={`mt-6 inline-flex items-center gap-2 text-sm font-semibold ${service.featured ? "text-brand" : "text-ink"}`}>Ver servicio <ArrowUpRight size={16} /></span> : null}
     </div>
   );
 }

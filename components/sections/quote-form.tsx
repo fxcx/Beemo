@@ -1,8 +1,9 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight } from "@/components/icons";
+import { ArrowLeft, ArrowRight } from "@/components/genericos/icons";
 import { quoteContent, quoteDeadlines, quoteProjectTypes } from "@/lib/content";
+import { configuracion } from "@/utils/configuracion";
 
 type FormState = {
   projectType: string;
@@ -47,6 +48,18 @@ export function QuoteForm({ initialProjectType }: { initialProjectType?: string 
       setError("Completá tu nombre y un email válido.");
       return;
     }
+    const lines = [
+      `Hola! Me gustaría pedir un presupuesto.`,
+      ``,
+      `• Proyecto: ${form.projectType}`,
+      `• Descripción: ${form.description}`,
+      `• Plazo: ${form.deadline}`,
+      `• Nombre: ${form.name}`,
+      `• Email: ${form.email}`,
+      form.company ? `• Empresa: ${form.company}` : "",
+      form.phone ? `• Teléfono: ${form.phone}` : "",
+    ].filter(Boolean).join("\n");
+    window.open(`${configuracion.whatsapp.url}?text=${encodeURIComponent(lines)}`, "_blank");
     setSubmitted(true);
   };
 
@@ -71,8 +84,8 @@ export function QuoteForm({ initialProjectType }: { initialProjectType?: string 
             <div className="grid min-h-96 place-items-center text-center">
               <div className="max-w-lg">
                 <div className="mx-auto grid size-16 place-items-center rounded-full bg-brand-soft text-2xl text-brand-deep">✓</div>
-                <h3 className="mt-6 font-display text-3xl font-semibold tracking-[-0.04em]">Resumen listo</h3>
-                <p className="mt-4 text-base leading-7 text-muted">Esta es una demostración: tus datos no se envían ni se guardan. Completaste el resumen de {form.projectType.toLowerCase()} y volverías al inicio con {form.name} como contacto.</p>
+                <h3 className="mt-6 font-display text-3xl font-semibold tracking-[-0.04em]">Mensaje listo ✨</h3>
+                <p className="mt-4 text-base leading-7 text-muted">Se abrió WhatsApp con el resumen de tu consulta. Si no se abrió automáticamente, podés escribirnos directamente a <a href={configuracion.whatsapp.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-deep hover:underline">nuestro WhatsApp</a>.</p>
                 <button type="button" onClick={reset} className="mt-8 rounded-full border border-line px-5 py-3 text-sm font-semibold text-ink transition hover:border-ink">Cargar otro proyecto</button>
               </div>
             </div>
@@ -149,7 +162,7 @@ export function QuoteForm({ initialProjectType }: { initialProjectType?: string 
               <div className="flex flex-col-reverse gap-3 border-t border-line pt-6 sm:flex-row sm:justify-between">
                 <button type="button" disabled={step === 1} onClick={() => { setError(""); setStep((current) => Math.max(1, current - 1)); }} className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-muted transition hover:text-ink disabled:cursor-not-allowed disabled:opacity-40"><ArrowLeft size={17} /> Atrás</button>
                 <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black">
-                  {step === 3 ? "Finalizar demo" : "Continuar"} <ArrowRight size={17} />
+                  {step === 3 ? "Enviar por WhatsApp" : "Continuar"} <ArrowRight size={17} />
                 </button>
               </div>
             </form>

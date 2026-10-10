@@ -1,4 +1,4 @@
-import { ArrowRight, Check } from "@/components/icons";
+import { ArrowRight, Check } from "@/components/genericos/icons";
 import { heroContent } from "@/lib/content";
 
 export function Hero() {

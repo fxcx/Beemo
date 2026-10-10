@@ -1,4 +1,4 @@
-import { ArrowRight } from "@/components/icons";
+import { ArrowRight } from "@/components/genericos/icons";
 import { processSteps } from "@/lib/content";
 
 export function Process() {

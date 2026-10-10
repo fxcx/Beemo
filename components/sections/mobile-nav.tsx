@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Close, Menu } from "@/components/icons";
-import { BrandLogo } from "@/components/brand-logo";
+import { ArrowUpRight, Close, Menu } from "@/components/genericos/icons";
+import { BrandLogo } from "@/components/genericos/brand-logo";
 import Link from "next/link";
 import { mainNavigation } from "@/lib/content";
 import { configuracion } from "@/utils/configuracion";
