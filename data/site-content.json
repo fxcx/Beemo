@@ -128,8 +128,8 @@
           "slug": "contenido-meta-ads",
           "demoVideoUrl": "",
           "tag": "Captación digital",
-          "title": "Contenido + Meta Ads",
-          "short": "Contenido que comunica. Publicidad que llega.",
+          "title": "CRM + Meta Ads",
+          "short": "Redes sociales centralizadas. Publicidad que llega.",
           "description": "Creamos contenido para tu marca y gestionamos campañas publicitarias en Meta Ads para llegar a nuevos clientes y generar consultas.",
           "bullets": ["Estrategia de contenidos", "Creación de piezas", "Copys", "Campañas Meta Ads", "Segmentación de audiencias", "Optimización de campañas"],
           "detailIntro": "Creamos contenido para tu marca y campañas para convertir visibilidad en oportunidades comerciales.",
@@ -159,7 +159,7 @@
     {
       "id": "nosotros",
       "label": "Nosotros",
-      "title": "Más de 30 años generando soluciones",
+      "title": "Más de 20 años generando soluciones",
       "body": "Somos una empresa argentina dedicada al desarrollo de soluciones de software con tecnologías de punta, ofreciendo herramientas innovadoras para distintos tipos de pymes y empresas."
     },
     {
@@ -200,18 +200,17 @@
   ],
   "quoteProjectTypes": [
     { "label": "Software a medida", "sub": "Sistema de gestión, back-office o portal" },
-    { "label": "Aplicación móvil", "sub": "Android, iOS o app para equipos" },
     { "label": "Sitio web", "sub": "Institucional, corporativo o autoadministrable" },
     { "label": "Agentes de IA", "sub": "Asistente, automatización o integración" },
     { "label": "Landing Page + Google", "sub": "Presencia profesional para tu negocio y Perfil de Negocio de Google." },
-    { "label": "Contenido + Meta Ads", "sub": "Creación de contenido y campañas para generar nuevas oportunidades." },
+    { "label": "Configuracion CRM + Meta Ads", "sub": "Campañas para generar nuevas oportunidades, cuentas centralizadas." },
     { "label": "Presencia Digital + Captación", "sub": "Landing, Google, contenido y publicidad en un mismo paquete." },
     { "label": "Otro proyecto", "sub": "Consultoría o solución específica" }
   ],
   "quoteDeadlines": ["Lo antes posible", "1–3 meses", "3–6 meses", "+6 meses", "Todavía no lo sé"],
   "hero": {
-    "experienceLabel": "Más de tres décadas de experiencia del equipo",
-    "titlePrefix": "Desarrollo de sistemas web",
+    "experienceLabel": "Tecnologías modernas",
+    "titlePrefix": "Desarrollo de sistemas",
     "titleHighlight": "a medida",
     "titleSuffix": "para tu empresa",
     "description": "Análisis, software, apps y mantenimiento. Tecnología de punta, criterio y acompañamiento para convertir procesos reales en soluciones que funcionan.",
@@ -227,16 +226,11 @@
       "integrar(IA)",
       "mantener(vigente)"
     ],
-    "readyLabel": "listo para tu empresa",
-    "metrics": [
-      { "value": "+30", "label": "años de experiencia del equipo" },
-      { "value": "1992", "label": "inicio de trayectoria del equipo" },
-      { "value": "+20", "label": "años de experiencia del equipo" }
-    ]
+    "readyLabel": "listo para tu empresa"
   },
   "company": {
     "eyebrow": "/ Quiénes somos",
-    "title": "Más de 30 años de experiencia del equipo",
+    "title": "Más de 20 años de experiencia del equipo",
     "quote": "Compartimos el conocimiento del negocio con nuestros clientes, para lograr un aprendizaje en conjunto y flexibilizar nuestras soluciones a sus requerimientos.",
     "values": ["Confianza", "Cercanía", "Flexibilidad", "Pragmatismo", "Innovación", "Calidad", "Conocimiento compartido"],
     "teamEyebrow": "Nuestro equipo",
