@@ -199,12 +199,7 @@
     }
   ],
   "quoteProjectTypes": [
-    { "label": "Software a medida", "sub": "Sistema de gestión, back-office o portal" },
     { "label": "Sitio web", "sub": "Institucional, corporativo o autoadministrable" },
-    { "label": "Agentes de IA", "sub": "Asistente, automatización o integración" },
-    { "label": "Landing Page + Google", "sub": "Presencia profesional para tu negocio y Perfil de Negocio de Google." },
-    { "label": "Configuracion CRM + Meta Ads", "sub": "Campañas para generar nuevas oportunidades, cuentas centralizadas." },
-    { "label": "Presencia Digital + Captación", "sub": "Landing, Google, contenido y publicidad en un mismo paquete." },
     { "label": "Otro proyecto", "sub": "Consultoría o solución específica" }
   ],
   "quoteDeadlines": ["Lo antes posible", "1–3 meses", "3–6 meses", "+6 meses", "Todavía no lo sé"],

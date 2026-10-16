@@ -33,44 +33,58 @@ export default function BlogIndexPage() {
     <div className="overflow-x-clip bg-surface text-ink">
       <Header homePrefix="/" />
       <main>
-        <section className="px-5 pb-14 pt-16 sm:px-8 sm:pb-20 sm:pt-24 lg:px-10">
+        <section className="px-5 pb-14 pt-12 sm:px-8 sm:pb-16 sm:pt-16 lg:px-10">
           <div className="mx-auto max-w-7xl">
-            <p className="eyebrow">/ Recursos {configuracion.nameCompany}</p>
-            <h1 className="mt-4 max-w-4xl font-display text-[clamp(2.6rem,6vw,5rem)] font-semibold leading-[0.98] tracking-[-0.055em]">Ideas útiles para <span className="text-muted">decidir mejor</span></h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">Guías prácticas sobre tecnología, procesos y crecimiento digital. Sin recetas mágicas: contexto para elegir la solución adecuada para tu empresa.</p>
-            <nav aria-label="Categorías del blog" className="mt-9 flex flex-wrap gap-x-6 gap-y-3 border-y border-line py-4 text-sm font-semibold">
-              {blogCategories.map((category) => <a key={category.slug} href={`#categoria-${category.slug}`} className="text-muted transition hover:text-ink">{category.title}</a>)}
-            </nav>
-          </div>
-        </section>
-
-        <section id={`categoria-${featuredPost.category}`} className="scroll-mt-28 px-5 pb-16 sm:px-8 lg:px-10">
-          <div className="mx-auto max-w-7xl">
-            <p className="eyebrow">/ Artículo destacado</p>
-            <div className="mt-5"><BlogPostCard post={featuredPost} featured /></div>
-          </div>
-        </section>
-
-        <section className="border-t border-line bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
-          <div className="mx-auto max-w-7xl">
-            <div className="flex flex-wrap items-end justify-between gap-5">
-              <div>
-                <p className="eyebrow">/ Biblioteca</p>
-                <h2 className="mt-3 font-display text-3xl font-semibold tracking-[-0.045em] sm:text-4xl">Explorá por tema</h2>
-              </div>
-              <Link href="/#presupuesto" className="text-sm font-semibold text-ink transition hover:text-brand-deep">Hablemos de tu proyecto ↗</Link>
+            <div className="flex flex-col gap-5 border-b border-ink pb-7 lg:flex-row lg:items-end lg:justify-between">
+              <h1 className="max-w-3xl font-display text-[clamp(2.6rem,5.5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.035em]"><span className="block">Ideas útiles para</span>decidir mejor</h1>
+              <p className="max-w-md pb-1 text-base leading-7 text-muted sm:text-lg">Guías prácticas sobre tecnología, procesos y crecimiento digital. Sin recetas mágicas: contexto para elegir la solución adecuada para tu empresa.</p>
             </div>
-            <div className="mt-10 grid gap-12">
+
+            <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(16rem,.72fr)] lg:gap-12">
+              <div id={`categoria-${featuredPost.category}`} className="scroll-mt-28">
+                <BlogPostCard post={featuredPost} featured />
+              </div>
+              <aside aria-labelledby="blog-topics-title" className="border-t border-line pt-5 lg:border-t-0 lg:pt-1">
+                <h2 id="blog-topics-title" className="font-display text-xl font-semibold tracking-[-0.025em]">Explorá por tema</h2>
+                <nav aria-label="Categorías del blog" className="mt-4">
+                  {blogCategories.map((category) => {
+                    const count = blogPosts.filter((post) => post.category === category.slug).length;
+                    return (
+                      <a
+                        key={category.slug}
+                        href={`#categoria-${category.slug}`}
+                        className="group flex items-baseline justify-between gap-4 border-t border-line py-3 transition-colors hover:text-brand-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-deep"
+                      >
+                        <span className="text-sm font-semibold">{category.title}</span>
+                        <span className="text-xs text-muted transition-colors group-hover:text-brand-deep">{count} {count === 1 ? "artículo" : "artículos"}</span>
+                      </a>
+                    );
+                  })}
+                </nav>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-line bg-white px-5 py-14 sm:px-8 sm:py-18 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="flex flex-wrap items-end justify-between gap-5 border-b border-line pb-6">
+              <div>
+                <h2 className="font-display text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">Todos los temas</h2>
+              </div>
+              <Link href="/#presupuesto" className="text-sm font-semibold text-ink transition hover:text-brand-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-deep">Hablemos de tu proyecto ↗</Link>
+            </div>
+            <div className="mt-8 grid gap-11">
               {blogCategories.filter((category) => category.slug !== featuredPost.category).map((category) => {
                 const categoryPosts = blogPosts.filter((post) => post.category === category.slug);
                 if (!categoryPosts.length) return null;
                 return (
-                  <section key={category.slug} id={`categoria-${category.slug}`} className="scroll-mt-28 border-t border-line pt-8">
-                    <div className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
-                      <h3 className="font-display text-2xl font-semibold tracking-[-0.04em]">{category.title}</h3>
-                      <p className="max-w-xl text-sm leading-6 text-muted">{category.description}</p>
+                  <section key={category.slug} id={`categoria-${category.slug}`} className="scroll-mt-28 border-t border-line pt-6">
+                    <div className="mb-5 grid gap-2 md:grid-cols-[minmax(12rem,.7fr)_minmax(0,1.3fr)] md:items-baseline">
+                      <h3 className="font-display text-2xl font-semibold tracking-[-0.025em]">{category.title}</h3>
+                      <p className="max-w-2xl text-sm leading-6 text-muted">{category.description}</p>
                     </div>
-                    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    <div className="grid gap-x-7 gap-y-8 md:grid-cols-2 xl:grid-cols-3">
                       {categoryPosts.map((post) => <BlogPostCard key={post.slug} post={post} />)}
                     </div>
                   </section>

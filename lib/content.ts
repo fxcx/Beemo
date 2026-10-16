@@ -65,11 +65,18 @@ export const serviceCategories: ServiceCategory[] = siteContent.serviceCategorie
 
 export const services = serviceCategories.flatMap((category) => category.services).filter((service) => service.visible !== false);
 export const getServiceBySlug = (slug: string) => services.find((service) => service.slug === slug);
+export const getQuoteProjectType = (service: Service) => service.quoteProjectType ?? service.title;
 
 export const clients: string[] = siteContent.clients;
 export const aboutTabs = siteContent.aboutTabs;
 export const processSteps = siteContent.processSteps;
-export const quoteProjectTypes = siteContent.quoteProjectTypes;
+export const quoteProjectTypes = [
+  ...services.map((service) => ({
+    label: getQuoteProjectType(service),
+    sub: service.short,
+  })),
+  ...siteContent.quoteProjectTypes,
+];
 export const quoteDeadlines = siteContent.quoteDeadlines;
 export const heroContent = siteContent.hero;
 export const companyContent = siteContent.company;

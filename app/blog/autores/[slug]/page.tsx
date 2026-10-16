@@ -49,17 +49,20 @@ export default async function BlogAuthorPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(authorJsonLd).replace(/</g, "\\u003c") }} />
       <Header homePrefix="/" />
       <main>
-        <section className="px-5 py-16 sm:px-8 sm:py-24 lg:px-10">
+        <section className="px-5 py-12 sm:px-8 sm:py-16 lg:px-10">
           <div className="mx-auto max-w-7xl">
-            <nav aria-label="Migas de pan" className="flex items-center gap-2 text-sm font-semibold text-muted"><Link href="/" className="hover:text-ink">Inicio</Link><span aria-hidden="true">/</span><Link href="/blog" className="hover:text-ink">Recursos</Link><span aria-hidden="true">/</span><span className="text-ink">Autor</span></nav>
-            <p className="eyebrow mt-10">/ Autoría</p>
-            <h1 className="mt-4 font-display text-4xl font-semibold tracking-tighter sm:text-5xl">{author.name}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">{author.description}</p>
-            <Link href="/blog" className="mt-6 inline-flex text-sm font-semibold text-ink hover:text-brand-deep">Volver a Recursos ↗</Link>
+            <nav aria-label="Migas de pan" className="flex items-center gap-2 text-sm font-medium text-muted"><Link href="/" className="hover:text-ink">Inicio</Link><span aria-hidden="true">/</span><Link href="/blog" className="hover:text-ink">Recursos</Link><span aria-hidden="true">/</span><span className="text-ink">Autor</span></nav>
+            <div className="mt-9 grid gap-7 border-b border-ink pb-9 md:grid-cols-[minmax(0,.8fr)_minmax(18rem,1fr)] md:items-end">
+              <h1 className="font-display text-[clamp(2.5rem,5vw,4.25rem)] font-semibold leading-[1.04] tracking-[-0.035em]">{author.name}</h1>
+              <div>
+                <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg">{author.description}</p>
+                <Link href="/blog" className="mt-5 inline-flex text-sm font-semibold text-ink transition-colors hover:text-brand-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-deep">Volver a Recursos ↗</Link>
+              </div>
+            </div>
           </div>
         </section>
-        <section className="border-t border-line bg-white px-5 py-14 sm:px-8 sm:py-18 lg:px-10">
-          <div className="mx-auto max-w-7xl"><h2 className="font-display text-2xl font-semibold tracking-[-0.04em]">Artículos de {author.name}</h2><div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{authoredPosts.map((post) => <BlogPostCard key={post.slug} post={post} />)}</div></div>
+        <section className="bg-white px-5 py-12 sm:px-8 sm:py-16 lg:px-10">
+          <div className="mx-auto max-w-7xl"><h2 className="border-b border-line pb-5 font-display text-2xl font-semibold tracking-[-0.025em]">Artículos de {author.name}</h2><div className="mt-7 grid gap-x-7 gap-y-8 md:grid-cols-2 xl:grid-cols-3">{authoredPosts.map((post) => <BlogPostCard key={post.slug} post={post} />)}</div></div>
         </section>
       </main>
       <Footer homePrefix="/" />

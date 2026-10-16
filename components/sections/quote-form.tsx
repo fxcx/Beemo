@@ -21,7 +21,10 @@ const steps = ["Proyecto", "Alcance", "Contacto"];
 
 export function QuoteForm({ initialProjectType }: { initialProjectType?: string }) {
   const [step, setStep] = useState(1);
-  const [form, setForm] = useState<FormState>(() => ({ ...initialState, projectType: initialProjectType ?? "" }));
+  const [form, setForm] = useState<FormState>(() => ({
+    ...initialState,
+    projectType: quoteProjectTypes.find((option) => option.label === initialProjectType)?.label ?? "",
+  }));
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 

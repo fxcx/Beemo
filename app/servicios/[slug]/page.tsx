@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, Icon } from "@/components/genericos/icons";
 import { Footer } from "@/components/sections/footer";
 import { Header } from "@/components/sections/header";
-import { getServiceBySlug, services, type IconName } from "@/lib/content";
+import { getQuoteProjectType, getServiceBySlug, services, type IconName } from "@/lib/content";
 import { configuracion } from "@/utils/configuracion";
 
 type Props = {
@@ -48,7 +48,7 @@ export default async function ServicePage({ params }: Props) {
   const service = getServiceBySlug(slug);
   if (!service?.slug || !service.seoTitle || !service.seoDescription) notFound();
 
-  const quoteHref = `/?projectType=${encodeURIComponent(service.quoteProjectType ?? service.title)}#presupuesto`;
+  const quoteHref = `/?projectType=${encodeURIComponent(getQuoteProjectType(service))}#presupuesto`;
 
   return (
     <div className="overflow-x-clip bg-surface text-ink">

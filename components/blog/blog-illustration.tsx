@@ -17,13 +17,12 @@ export function BlogIllustration({ visual, compact = false }: { visual: BlogPost
     <div
       role="img"
       aria-label={diagram.label}
-      className={`noise relative isolate flex w-full items-center justify-center overflow-hidden rounded-2xl border border-line bg-white ${compact ? "min-h-36 p-4" : "min-h-56 p-6 sm:min-h-72 sm:p-10"}`}
+      className={`relative flex w-full items-center justify-center overflow-hidden rounded-xl bg-brand-soft ${compact ? "min-h-36 p-4" : "min-h-56 p-6 sm:min-h-72 sm:p-10"}`}
     >
-      <div className="absolute inset-0 -z-10 opacity-60" style={{ backgroundImage: "radial-gradient(#dbe3df 1px, transparent 1px)", backgroundSize: "18px 18px" }} />
       <div className={`relative flex max-w-full flex-wrap items-center justify-center ${compact ? "gap-2" : "gap-3 sm:gap-5"}`}>
         {diagram.nodes.map((node, index) => (
           <div key={node} className="contents">
-            <span className={`grid min-h-12 place-items-center rounded-xl border border-line bg-white px-3 text-center font-semibold text-ink shadow-card ${compact ? "min-w-16 text-xs" : "min-w-20 px-4 py-3 text-sm sm:min-w-24 sm:text-base"} ${index === 1 ? "border-brand/50 bg-brand-soft" : ""}`}>
+            <span className={`grid min-h-12 place-items-center rounded-lg border border-brand-deep/20 bg-white px-3 text-center font-semibold text-ink ${compact ? "min-w-16 text-xs" : "min-w-20 px-4 py-3 text-sm sm:min-w-24 sm:text-base"} ${index === 1 ? "border-brand-deep/50 bg-brand" : ""}`}>
               {node}
             </span>
             {index < diagram.nodes.length - 1 ? <span aria-hidden="true" className={`font-bold text-brand-deep ${compact ? "text-sm" : "text-lg sm:text-xl"}`}>{diagram.connector}</span> : null}
