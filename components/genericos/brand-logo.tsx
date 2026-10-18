@@ -1,4 +1,3 @@
-import { BeemoIcon3D, } from "@/tools/logo/beemoIcon3D";
 import { MetatronLogo3D } from "@/tools/logo/metatronLogo3D";
 /**
  * Ícono 3D + nombre. El nombre queda quieto; solo el ícono se mueve.
