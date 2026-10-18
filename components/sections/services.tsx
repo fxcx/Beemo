@@ -12,8 +12,8 @@ export function Services() {
           <p className="mt-6 text-base leading-7 text-muted sm:text-lg">Desde el relevamiento inicial hasta el desarrollo, implementación y crecimiento digital de tu empresa.</p>
         </div>
 
-        <nav aria-label="Categorías de servicios" className="-mx-5 mt-8 flex snap-x snap-mandatory flex-nowrap gap-x-6 overflow-x-auto overscroll-x-contain border-y border-line px-5 py-4 text-sm font-semibold sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
-          {serviceCategories.map((category) => <a key={category.id} href={`#${category.id}`} className="shrink-0 snap-start whitespace-nowrap py-2 text-muted transition hover:text-ink">{category.title}</a>)}
+        <nav aria-label="Categorías de servicios" className="mt-8 flex flex-wrap gap-x-6 border-y border-line py-2 text-sm font-semibold">
+          {serviceCategories.map((category) => <a key={category.id} href={`#${category.id}`} className="inline-flex min-h-11 min-w-0 max-w-full items-center whitespace-normal break-words py-2 text-muted transition hover:text-ink">{category.title}</a>)}
         </nav>
 
         {serviceCategories.map((category, index) => {

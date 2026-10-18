@@ -7,7 +7,7 @@ export function BrandLogo({
   className = "",
   inverted = false,
   size = 56,
-  name = "Beemo",
+  name = "Metatron",
 }: {
   className?: string;
   inverted?: boolean;
